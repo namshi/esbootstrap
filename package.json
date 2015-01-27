@@ -1,0 +1,20 @@
+{
+  "name": "esbootstrap",
+  "version": "0.1.0",
+  "description": "Helper to bootstrap an index and load fixtures to an elasticsearch instance",
+  "main": "esbootstrap.js",
+  "keywords": [
+    "elasticsearch",
+    "test",
+    "fixtures",
+    "bootstrap"
+  ],
+  "dependencies": {
+    "elasticsearch": ">=3.0.1"
+  },
+  "devDependencies": {
+    "mocha": "2.1.0"
+  },
+  "author": "Filippo De Santis <filippo.desantis@namshi.com>",
+  "license": "MIT"
+}
