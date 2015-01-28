@@ -1,31 +1,29 @@
-esbootstrap
-===========
+# esbootstrap
 
 esboostrap will bootstrap, map and load fixtures for an elasticsearch index.
 
 
-Install
--------
+## Installation
 
 Add esboostrap in devDependencies 
 
-
-    "devDependencies": {
-        ...
-        "esbootstrap": "https://github.com/namshi/esbootstrap"
-    },
+```
+"devDependencies": {
+    ...
+    "esbootstrap": "https://github.com/namshi/esbootstrap"
+},
+```
 
 and run 
 
-    npm intall 
-    
+```
+npm install 
+```    
 
-Usage
------
+## Usage
 
 
 ```javascript
-
 var esbootstrap = require('esbootstrap');
 var options = {
     elasticsearch: {
@@ -43,13 +41,12 @@ var options = {
 esbootstrap.bootstrap(options, function() {
     //....
 });
-
 ```
 
-Or if you already have an elasticsearch instance up and running and want to only load some data
+Or if you already have an elasticsearch instance up
+and running and want to only load some data:
 
 ```javascript
-
 var options = {
     elasticsearch: {
         host: ...
@@ -63,5 +60,8 @@ var options = {
 esbootstrap.loadFixtures(options, function() {
     //....
 });
-
 ```
+
+## Tests
+
+![b****-please](http://galeri2.uludagsozluk.com/342/bitch-please_459292.jpg)
