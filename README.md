@@ -2,26 +2,15 @@
 
 esboostrap will bootstrap, map and load fixtures for an elasticsearch index.
 
-
 ## Installation
 
 Add esboostrap in devDependencies 
 
+```bash
+npm install esbootstrap --save-dev
 ```
-"devDependencies": {
-    ...
-    "esbootstrap": ">=1.0.0"
-},
-```
-
-and run 
-
-```
-npm update esbootstrap
-```    
 
 ## Usage
-
 
 ```javascript
 var esbootstrap = require('esbootstrap');
