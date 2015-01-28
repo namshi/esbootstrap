@@ -45,7 +45,9 @@ module.exports = {
     (function() {
       client.indices['delete']({index: options.indexName})['finally'](function(){
         client.indices['create'](options.createRequestBody)
-          .then(client.indices.putMapping(options.mappingRequestBody))
+          .then(function(){
+            client.indices.putMapping(options.mappingRequestBody)
+          })
           .then(function(){
             if (options.fixtures) {
               self.loadFixtures(options, callback);
