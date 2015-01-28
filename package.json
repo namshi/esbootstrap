@@ -15,6 +15,14 @@
   "devDependencies": {
     "mocha": "2.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/namshi/esbootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/namshi/esbootstrap/issues"
+  },
+  "homepage": "https://github.com/namshi/esbootstrap",
   "author": "Filippo De Santis <filippo.desantis@namshi.com>",
   "license": "MIT"
 }
