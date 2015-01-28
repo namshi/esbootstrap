@@ -47,14 +47,13 @@ module.exports = {
         client.indices['create'](options.createRequestBody)
           .then(client.indices.putMapping(options.mappingRequestBody))
           .then(function(){
-            client.close();
-          })
-          .then(function(){
             if (options.fixtures) {
               self.loadFixtures(options, callback);
             } else {
               setTimeout(callback, 1500);
             }
+          })['finally'](function(){
+            client.close();
           });
       });
     })();
