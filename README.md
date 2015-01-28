@@ -10,14 +10,14 @@ Add esboostrap in devDependencies
 ```
 "devDependencies": {
     ...
-    "esbootstrap": "https://github.com/namshi/esbootstrap"
+    "esbootstrap": ">=1.0.0"
 },
 ```
 
 and run 
 
 ```
-npm install 
+npm update esbootstrap
 ```    
 
 ## Usage
