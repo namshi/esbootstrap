@@ -14,6 +14,7 @@ npm install esbootstrap --save-dev
 
 ```javascript
 var esbootstrap = require('esbootstrap');
+var fixtures = require('./path/tofixtures.json');
 var options = {
     elasticsearch: {
         host: ...
@@ -24,7 +25,7 @@ var options = {
     indexName:...,
     createRequestBody: {...}, // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-create
     mappingRequestBody: {...}, // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-indices-putmapping
-    fixtures: {...} // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-bulk 
+    fixtures: fixtures // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-bulk 
 };
 
 esbootstrap.bootstrap(options, function() {
@@ -36,6 +37,7 @@ Or if you already have an elasticsearch instance up
 and running and want to only load some data:
 
 ```javascript
+var fixtures = require('./path/tofixtures.json');
 var options = {
     elasticsearch: {
         host: ...
@@ -43,7 +45,7 @@ var options = {
         requestTimeout: ...
         keepAlive: ..
     },
-    fixtures: {...} // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-bulk 
+    fixtures: fixtures // @see http://www.elasticsearch.org/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-bulk 
 };
 
 esbootstrap.loadFixtures(options, function() {
