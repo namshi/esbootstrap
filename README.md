@@ -7,7 +7,7 @@ esboostrap will bootstrap, map and load fixtures for an elasticsearch index.
 Install
 -------
 
-Add esboostrap as a devDependencies 
+Add esboostrap in devDependencies 
 
 
     "devDependencies": {

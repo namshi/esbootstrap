@@ -44,18 +44,18 @@ module.exports = {
 
     (function() {
       client.indices['delete']({index: options.indexName})['finally'](function(){
-        client.indices['create'](options.createRequestBody).then(function(){
-          client.indices.putMapping(options.mappingRequestBody).then(function(){
-
+        client.indices['create'](options.createRequestBody)
+          .then(client.indices.putMapping(options.mappingRequestBody))
+          .then(function(){
             client.close();
-
+          })
+          .then(function(){
             if (options.fixtures) {
               self.loadFixtures(options, callback);
             } else {
               setTimeout(callback, 1500);
             }
           });
-        });
       });
     })();
   },
