@@ -55,10 +55,12 @@ module.exports = {
                 }
               });
           })['finally'](function(){
-            client.close();
-          });
+          client.close();
+        });
+      })['catch'](function(error){
+        console.warn('Warning:' + JSON.stringify(error));
       });
-    })();
+    }());
   },
 
   /**
