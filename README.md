@@ -55,4 +55,4 @@ esbootstrap.loadFixtures(options, function() {
 
 ## Tests
 
-![b****-please](http://galeri2.uludagsozluk.com/342/bitch-please_459292.jpg)
+After ```npm install``` run ```npm test``` . Enjoy!

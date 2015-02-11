@@ -1,4 +1,16 @@
 var elasticsearch = require('elasticsearch');
+var Promise = require("bluebird");
+
+function putMapping(mappings) {
+  if (!mappings) {
+
+    return Promise.resolve();
+  }
+
+  return client.indices.putMapping(mappings);
+}
+
+
 
 module.exports = {
 
@@ -43,10 +55,11 @@ module.exports = {
     });
 
     (function() {
+
       client.indices['delete']({index: options.indexName})['finally'](function(){
         client.indices['create'](options.createRequestBody)
           .then(function(){
-            client.indices.putMapping(options.mappingRequestBody)
+            putMapping(options.mappingRequestBody)
               .then(function(){
                 if (options.fixtures) {
                   self.loadFixtures(options, callback);
